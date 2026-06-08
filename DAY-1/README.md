@@ -1,59 +1,251 @@
-# MyFirstApp
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+<img src="https://user-images.githubusercontent.com/74038190/212744275-2d4aa7f5-3d31-4d08-bd56-0e0f6f4f9a17.gif" width="100%">
 
-## Development server
+# 🚀 Angular Learning Journey
 
-To start a local development server, run:
+## 📚 Day 1 - Introduction to Angular
+
+![Angular](https://img.shields.io/badge/Angular-20-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Learning Angular step by step through practical assignments
+
+</div>
+
+---
+
+# 📖 Overview
+
+This project is part of my Angular learning journey. It focuses on understanding Angular fundamentals, project setup, Angular CLI, TypeScript basics, and component-based architecture.
+
+Angular is a powerful front-end framework used to build scalable, dynamic, and modern web applications.
+
+---
+
+# 🎯 Learning Objectives
+
+✅ Understand Angular Framework
+
+✅ Install Angular CLI
+
+✅ Create an Angular Project
+
+✅ Learn Angular Project Structure
+
+✅ Understand TypeScript Basics
+
+✅ Create and Run Angular Applications
+
+✅ Build Reusable Components
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Angular | Frontend Framework |
+| TypeScript | Application Logic |
+| HTML | Structure |
+| CSS | Styling |
+| Angular CLI | Project Management |
+
+---
+
+# 📂 Project Structure
+
+```text
+DAY-1/
+│
+├── src/
+│   ├── app/
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   └── app.css
+│   │
+│   └── main.ts
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Shaily-kumari5/CG_HERITAGE_ANGULAR.git
+```
+
+## 2️⃣ Navigate to the Project Folder
+
+```bash
+cd DAY-1
+```
+
+## 3️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+## 4️⃣ Run the Application
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 5️⃣ Open Browser
 
-## Code scaffolding
+```text
+http://localhost:4200
+```
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
+
+# 🔥 Angular CLI Commands
+
+### Create New Project
+
+```bash
+ng new project-name
+```
+
+### Generate Component
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Start Development Server
 
 ```bash
-ng generate --help
+ng serve
 ```
 
-## Building
-
-To build the project run:
+### Build Application
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+# 📚 Topics Covered
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Angular Introduction
 
-```bash
-ng test
+Angular is a TypeScript-based framework developed by Google for building dynamic web applications.
+
+## Angular CLI
+
+Angular CLI simplifies project creation, development, and deployment.
+
+## TypeScript Basics
+
+```typescript
+let name: string = "Shaily Kumari";
+let age: number = 21;
+let isStudent: boolean = true;
 ```
 
-## Running end-to-end tests
+## Angular Component Example
 
-For end-to-end (e2e) testing, run:
+```typescript
+import { Component } from '@angular/core';
 
-```bash
-ng e2e
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.html',
+  styleUrls: ['./app.css']
+})
+export class AppComponent {
+  title = 'My First Angular App';
+}
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+# ✨ Features
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔹 Angular Project Setup
+
+🔹 Angular CLI Usage
+
+🔹 TypeScript Integration
+
+🔹 Component-Based Architecture
+
+🔹 Dynamic Data Rendering
+
+🔹 Beginner-Friendly Examples
+
+---
+
+# 📸 Project Preview
+
+> Add your project screenshots here.
+
+```markdown
+![Home Page](./screenshots/home.png)
+```
+
+---
+
+# 🎓 Learning Outcomes
+
+After completing this assignment, I learned:
+
+- Angular Fundamentals
+- Angular Project Structure
+- Angular CLI Commands
+- TypeScript Basics
+- Component Creation
+- Data Binding Concepts
+- Running Angular Applications
+
+---
+
+# 🌟 Future Enhancements
+
+- Routing
+- Services
+- Dependency Injection
+- Forms Module
+- API Integration
+- Advanced Components
+
+---
+
+# 👩‍💻 Author
+
+## Shaily Kumari
+
+GitHub Profile:
+
+https://github.com/Shaily-kumari5
+
+---
+
+# 📊 GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Shaily-kumari5&show_icons=true&theme=tokyonight)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Shaily-kumari5&layout=compact&theme=tokyonight)
+
+---
+
+<div align="center">
+
+## ⭐ If you found this repository helpful, please consider giving it a star!
+
+### Made with ❤️ while learning Angular
+
+</div>
