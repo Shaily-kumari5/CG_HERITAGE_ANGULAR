@@ -1,0 +1,17 @@
+h1{
+    color: blue;
+}
+.card{
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+
+  border: 1px solid #e24545;
+  border-radius: 12px;
+
+  background-color: #f0f04a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  font-family: Arial, sans-serif;
+
+}

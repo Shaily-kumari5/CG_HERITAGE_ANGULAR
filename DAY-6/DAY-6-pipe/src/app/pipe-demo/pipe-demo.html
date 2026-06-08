@@ -1,0 +1,60 @@
+<p>pipe-demo works!</p>
+<h1>Assignment 1 </h1>
+<h2>Question 1 </h2>
+<p>Short Date : {{todayDate | date:'shortDate'}}</p>
+<p>Long Date: {{ todayDate | date:'longDate' }}</p>
+<p>Full Date: {{ todayDate | date:'fullDate' }}</p>
+<p>Custom Format: {{ todayDate | date:'dd/MM/yyyy HH:mm' }}</p>
+<hr>
+<h2>Question 2</h2>
+<p>Product Price in rupees without decimal : {{productPrice | currency :'INR' : 'symbol' : '1.0-0'}}</p>
+<hr>
+<h2>Question 3</h2>
+<p>Product Price in US Dollar : {{productPrice | currency :'USD'}}</p>
+<p>Product Price in EURO : {{productPrice | currency :'EUR'}}</p>
+<p>Product Price in British Pound : {{productPrice | currency :'GBP'}}</p>
+<hr>
+<h2>Question 4</h2>
+<p>Title case: {{ productName | titlecase }}</p>
+<p>Upper case: {{ productName | uppercase }}</p>
+<p>Lower case: {{ productName | lowercase }}</p>
+<hr>
+<h2>Question 5</h2>
+<p>discount : {{discount | percent :'1.2-2'}}</p>
+<hr>
+<h2>Question 6</h2>
+<ul>
+  <li *ngFor="let item of orderItems | slice:0:3">
+    {{ item }}
+  </li>
+</ul>
+<hr>
+<h2>Question 7</h2>
+<pre>{{ stockData | json }}</pre>
+<hr>
+<h2>Question 8</h2>
+<p>{{ todayDate | date:'fullDate' | uppercase }}</p>
+<hr><br><hr>
+<h1>Assignment 2</h1>
+<h2>Question 12 card preview </h2>
+<div class="card">
+    
+<h2>Question 9</h2>
+<p>{{ blogPost.title.trim() | titlecase | slice:0:40 }}...</p>
+<hr>
+<h2>Question 10</h2>
+<p>
+    <strong>Date:</strong>
+    {{ blogPost.publishedAt | date:'EEEE, MMMM d, y' | uppercase }}
+</p>
+<hr>
+<h2>Question 11</h2>
+<p>{{ blogPost.content | slice:0:80 | lowercase }}...</p>
+<hr>
+<h2>Question 12</h2>
+<ul>
+     <li *ngFor="let tag of blogPost.tags | slice:0:3">
+      {{ tag | uppercase }}
+    </li>
+</ul>
+</div>
