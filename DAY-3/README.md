@@ -1,33 +1,63 @@
-# Angular Fundamentals - Day 3 Assignment
+<div align="center">
 
-## 📖 Overview
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:FF512F,50:DD2476,100:6A11CB&text=Angular%20Fundamentals%20-%20Day%203&fontSize=42&fontColor=ffffff&animation=fadeIn" width="100%"/>
 
-This project demonstrates the fundamental concepts of Angular, including component creation, data binding techniques, event handling, and user interaction. The objective of this assignment is to understand how Angular connects data between the component class and the user interface.
+# 🚀 Angular Fundamentals - Day 3 Assignment
 
----
+### Exploring Data Binding, Event Handling & User Interaction
 
-## 🎯 Learning Objectives
+<p>
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+</p>
 
-- Understand Angular component architecture.
-- Learn Interpolation (`{{ }}`).
-- Implement Property Binding (`[ ]`).
-- Implement Event Binding (`( )`).
-- Use Two-Way Data Binding (`[(ngModel)]`).
-- Handle user interactions with button clicks.
-- Update UI dynamically using component properties and methods.
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&size=22&pause=1000&color=FF1493&center=true&vCenter=true&width=700&lines=Learning+Angular+Data+Binding;Understanding+Components;Handling+User+Events;Building+Interactive+Applications"/>
 
----
-
-## 🛠️ Technologies Used
-
-- Angular
-- TypeScript
-- HTML
-- CSS
+</div>
 
 ---
 
-## 📂 Project Structure
+# 📖 Overview
+
+This project focuses on Angular fundamentals and user interaction. It demonstrates how Angular connects the component class with the user interface using various data binding techniques.
+
+The assignment covers interpolation, property binding, event binding, two-way data binding, conditional rendering, and dynamic UI updates.
+
+---
+
+# 🎯 Learning Objectives
+
+✅ Understand Angular Components
+
+✅ Learn Interpolation (`{{ }}`)
+
+✅ Implement Property Binding (`[ ]`)
+
+✅ Implement Event Binding (`( )`)
+
+✅ Use Two-Way Data Binding (`[(ngModel)]`)
+
+✅ Handle User Interactions
+
+✅ Update UI Dynamically
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| 🔴 Angular | Frontend Framework |
+| 🔵 TypeScript | Application Logic |
+| 🟠 HTML5 | Structure |
+| 🔷 CSS3 | Styling |
+| ⚡ Angular Forms | Two-Way Binding |
+
+---
+
+# 📂 Project Structure
 
 ```text
 DAY-3/
@@ -52,11 +82,11 @@ DAY-3/
 
 ---
 
-## 🔹 Concepts Covered
+# 🔥 Concepts Covered
 
-### 1. Interpolation
+## 📝 Interpolation
 
-Displays data from the component class in the template.
+Displays data from the component into the template.
 
 ```html
 <h2>{{ name }}</h2>
@@ -70,9 +100,9 @@ Shaily Kumari
 
 ---
 
-### 2. Property Binding
+## 🎯 Property Binding
 
-Binds HTML properties to component values.
+Binds HTML properties to component variables.
 
 ```html
 <button [disabled]="isDisabled">
@@ -82,9 +112,9 @@ Binds HTML properties to component values.
 
 ---
 
-### 3. Event Binding
+## ⚡ Event Binding
 
-Executes a method when an event occurs.
+Executes methods when events occur.
 
 ```html
 <button (click)="followUser()">
@@ -94,9 +124,9 @@ Executes a method when an event occurs.
 
 ---
 
-### 4. Two-Way Data Binding
+## 🔄 Two-Way Data Binding
 
-Synchronizes data between the component and the template.
+Synchronizes data between the UI and component.
 
 ```html
 <input [(ngModel)]="username">
@@ -105,9 +135,9 @@ Synchronizes data between the component and the template.
 
 ---
 
-### 5. Conditional Rendering
+## 🔀 Conditional Rendering
 
-Display content based on conditions.
+Displays content based on conditions.
 
 ```html
 <p *ngIf="isLoggedIn">
@@ -117,7 +147,7 @@ Display content based on conditions.
 
 ---
 
-## 💻 Example Component
+# 💻 Example Component
 
 ### profile-card.ts
 
@@ -144,44 +174,76 @@ followUser() {
 
 ---
 
-## 🚀 Features
+# ✨ Features
 
-- User profile display
-- Dynamic data rendering
-- Button click handling
-- Follower counter functionality
-- Real-time UI updates
-- Angular data binding examples
+🚀 Dynamic Data Rendering
+
+🚀 User Interaction Handling
+
+🚀 Real-Time UI Updates
+
+🚀 Angular Data Binding
+
+🚀 Component-Based Development
+
+🚀 Interactive Profile Card
 
 ---
 
-## ▶️ Running the Project
+# 🏗️ Angular Data Flow
 
-### Clone Repository
+```text
+┌────────────────────┐
+│   User Interface   │
+│      (HTML)        │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Angular Component  │
+│   (TypeScript)     │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ User Interaction   │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Updated UI Output  │
+└────────────────────┘
+```
+
+---
+
+# 🚀 Getting Started
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/Shaily-kumari5/CG_HERITAGE_ANGULAR.git
 ```
 
-### Navigate to Project
+## Navigate to Project
 
 ```bash
 cd CG_HERITAGE_ANGULAR/DAY-3
 ```
 
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Run Application
+## Run Application
 
 ```bash
 ng serve
 ```
 
-### Open Browser
+## Open Browser
 
 ```text
 http://localhost:4200
@@ -189,40 +251,61 @@ http://localhost:4200
 
 ---
 
-## 📚 Key Angular Syntax
-
-| Syntax | Purpose |
-|----------|---------|
-| `{{ }}` | Interpolation |
-| `[property]` | Property Binding |
-| `(event)` | Event Binding |
-| `[(ngModel)]` | Two-Way Data Binding |
-| `*ngIf` | Conditional Rendering |
-| `*ngFor` | Looping through data |
-
----
-
-## 🎓 Learning Outcomes
+# 📚 Learning Outcomes
 
 After completing this assignment, I learned:
 
-- Angular component structure.
-- Data binding techniques.
-- Event handling in Angular.
-- Dynamic UI updates.
-- Component communication basics.
-- User interaction using TypeScript methods.
+✅ Angular Data Binding
+
+✅ Event Handling
+
+✅ Property Binding
+
+✅ Two-Way Data Binding
+
+✅ Conditional Rendering
+
+✅ Dynamic UI Updates
+
+✅ User Interaction Management
 
 ---
 
-## 👨‍💻 Author
+# 📸 Project Preview
 
-**Shaily Kumari**
+Add screenshots of your application here.
+
+```markdown
+![Project Screenshot](./screenshots/home.png)
+```
+
+---
+
+# 🌱 Future Enhancements
+
+- Angular Directives
+- Angular Pipes
+- Services
+- Routing
+- Forms Validation
+- API Integration
+
+---
+
+# 👩‍💻 Author
+
+## Shaily Kumari
 
 GitHub: https://github.com/Shaily-kumari5
 
 ---
 
-## ⭐ Acknowledgement
+<div align="center">
 
-This project was completed as part of Angular training and practice to strengthen understanding of Angular fundamentals and component-based development.
+## ⭐ If you found this project helpful, please consider giving it a Star!
+
+### Made with ❤️ while learning Angular
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:FF512F,50:DD2476,100:6A11CB"/>
+
+</div>
