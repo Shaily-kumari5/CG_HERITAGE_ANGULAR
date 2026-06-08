@@ -1,34 +1,60 @@
-# Angular Basics - Day 2 Assignment
+<div align="center">
 
-## 📖 Overview
+<img src="https://capsule-render.vercel.app/api?type=waving&height=250&color=0:4facfe,50:00f2fe,100:43e97b&text=Angular%20Basics%20-%20Day%202&fontSize=45&fontColor=ffffff&animation=fadeIn" width="100%"/>
 
-This project introduces the basic concepts of Angular application development. It focuses on creating components, understanding the Angular project structure, working with TypeScript variables, and displaying data using Angular templates.
+# 🚀 Angular Basics - Day 2 Assignment
 
-The goal of this assignment is to gain hands-on experience with Angular fundamentals and component-based architecture.
+### Learning Angular Components, TypeScript & Project Structure
 
----
+<p>
+<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+</p>
 
-## 🎯 Learning Objectives
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&size=22&pause=1000&color=00BFFF&center=true&vCenter=true&width=700&lines=Angular+Learning+Journey;Understanding+Components;Exploring+TypeScript;Building+Modern+Web+Applications"/>
 
-- Understand Angular project structure.
-- Learn how Angular components work.
-- Create and use standalone components.
-- Work with TypeScript variables and methods.
-- Display dynamic data in Angular templates.
-- Understand the relationship between TypeScript, HTML, and CSS files.
-
----
-
-## 🛠️ Technologies Used
-
-- Angular
-- TypeScript
-- HTML
-- CSS
+</div>
 
 ---
 
-## 📂 Project Structure
+# 📖 Overview
+
+This project introduces the fundamental concepts of Angular development. It focuses on understanding Angular components, project structure, TypeScript integration, and dynamic data rendering using Angular templates.
+
+The objective of this assignment is to gain practical experience with Angular fundamentals and component-based architecture.
+
+---
+
+# 🎯 Learning Objectives
+
+✅ Understand Angular Project Structure
+
+✅ Learn How Angular Components Work
+
+✅ Create and Use Standalone Components
+
+✅ Work with TypeScript Variables and Methods
+
+✅ Display Dynamic Data in Angular Templates
+
+✅ Understand the Relationship Between TypeScript, HTML, and CSS
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| 🔴 Angular | Frontend Framework |
+| 🔵 TypeScript | Application Logic |
+| 🟠 HTML5 | Structure |
+| 🔷 CSS3 | Styling |
+
+---
+
+# 📂 Project Structure
 
 ```text
 DAY-2/
@@ -49,13 +75,7 @@ DAY-2/
 
 ---
 
-## 🔹 Concepts Covered
-
-### Angular Component
-
-A component is the basic building block of an Angular application. It controls a section of the user interface.
-
-Example:
+# 🧩 Angular Component Example
 
 ```typescript
 import { Component } from '@angular/core';
@@ -66,15 +86,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./example.css']
 })
 export class ExampleComponent {
+
   name = 'Shaily Kumari';
+
+  showMessage() {
+    return 'Welcome to Angular!';
+  }
+
 }
 ```
 
 ---
 
-### Displaying Data
+# 📝 Displaying Data
 
-Data from the component can be displayed in the template using Angular expressions.
+Angular allows data from the component to be displayed dynamically in the template.
 
 ```html
 <h2>{{ name }}</h2>
@@ -88,9 +114,7 @@ Shaily Kumari
 
 ---
 
-### TypeScript Variables
-
-Angular components use TypeScript for application logic.
+# ⚙️ TypeScript Variables
 
 ```typescript
 name: string = 'Shaily Kumari';
@@ -100,56 +124,76 @@ city: string = 'Kolkata';
 
 ---
 
-### Methods in Components
+# 🔥 Features
 
-Methods can be created to perform actions and update data.
+✨ Angular Project Setup
 
-```typescript
-showMessage() {
-  return 'Welcome to Angular!';
-}
+✨ Component Creation
+
+✨ TypeScript Integration
+
+✨ Dynamic Data Display
+
+✨ Reusable Component Structure
+
+✨ Beginner-Friendly Examples
+
+---
+
+# 🏗️ Angular Architecture
+
+```text
+┌────────────────────┐
+│     HTML View      │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Angular Component  │
+│   (TypeScript)     │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Data & Business    │
+│      Logic         │
+└─────────┬──────────┘
+          │
+          ▼
+┌────────────────────┐
+│ Rendered Output    │
+└────────────────────┘
 ```
 
 ---
 
-## 🚀 Features
+# 🚀 Getting Started
 
-- Angular project setup
-- Component creation
-- TypeScript variables
-- Dynamic data display
-- Basic Angular template syntax
-- Understanding Angular architecture
-
----
-
-## ▶️ How to Run the Project
-
-### 1. Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Shaily-kumari5/CG_HERITAGE_ANGULAR.git
 ```
 
-### 2. Navigate to the Project Folder
+## Navigate to Project
 
 ```bash
 cd CG_HERITAGE_ANGULAR/DAY-2
 ```
 
-### 3. Install Dependencies
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Run the Application
+## Run Application
 
 ```bash
 ng serve
 ```
 
-### 5. Open in Browser
+## Open Browser
 
 ```text
 http://localhost:4200
@@ -157,43 +201,61 @@ http://localhost:4200
 
 ---
 
-## 📚 Angular Architecture Overview
-
-```text
-User Interface (HTML)
-        ↓
-Component (TypeScript)
-        ↓
-Data & Logic
-        ↓
-Rendered View
-```
-
-Angular follows a component-based architecture where each component manages its own template, logic, and styling.
-
----
-
-## 🎓 Learning Outcomes
+# 📚 Learning Outcomes
 
 After completing this assignment, I learned:
 
-- Angular project structure.
-- Purpose of Angular components.
-- Basics of TypeScript in Angular.
-- How to display dynamic data.
-- Component-based application development.
-- Angular template syntax and expressions.
+✅ Angular Project Structure
+
+✅ Angular Components
+
+✅ TypeScript Fundamentals
+
+✅ Dynamic Data Rendering
+
+✅ Component-Based Development
+
+✅ Angular Template Syntax
 
 ---
 
-## 👨‍💻 Author
+# 📸 Project Preview
 
-**Shaily Kumari**
+Add screenshots of your project here.
+
+```markdown
+![Project Screenshot](./screenshots/home.png)
+```
+
+---
+
+# 🌱 Future Enhancements
+
+- Event Binding
+- Property Binding
+- Two-Way Data Binding
+- Directives
+- Pipes
+- Routing
+- Services
+- API Integration
+
+---
+
+# 👩‍💻 Author
+
+## Shaily Kumari
 
 GitHub: https://github.com/Shaily-kumari5
 
 ---
 
-## ⭐ Acknowledgement
+<div align="center">
 
-This project was completed as part of Angular learning and practice to build a strong foundation in Angular development and component-based architecture.
+## ⭐ If you found this project helpful, please consider giving it a Star!
+
+### Made with ❤️ while learning Angular
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:4facfe,50:00f2fe,100:43e97b"/>
+
+</div>
