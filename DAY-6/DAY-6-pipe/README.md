@@ -33,9 +33,9 @@ DAY-6-pipe/
 │
 ├── src/
 │   ├── app/
-│   │   ├── app.component.ts
-│   │   ├── app.component.html
-│   │   └── app.component.css
+│   │   ├── pipe.component.ts
+│   │   ├── pipe.component.html
+│   │   └── pipe.component.css
 │   │
 │   └── main.ts
 │
