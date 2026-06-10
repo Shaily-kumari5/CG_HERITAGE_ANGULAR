@@ -1,0 +1,85 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+
+  <h1>Shared Module Demonstration</h1>
+
+  <!-- Button Component -->
+  <div class="card">
+
+    <h2>Button Component</h2>
+
+    <app-button variant="primary"></app-button>
+
+    <app-button variant="secondary"></app-button>
+
+    <app-button variant="danger"></app-button>
+
+  </div>
+
+  <!-- Badge Component -->
+  <div class="card">
+
+    <h2>Badge Component</h2>
+
+    <app-badge
+      label="New Product"
+      color="green">
+    </app-badge>
+
+  </div>
+
+  <!-- Spinner Component -->
+  <div class="card">
+
+    <h2>Spinner Component</h2>
+
+    <app-spinner></app-spinner>
+
+  </div>
+
+  <!-- Highlight Directive -->
+  <div class="card">
+
+    <h2>Highlight Directive</h2>
+
+    <p appHighlight color="lightblue">
+      Hover over this text to see the highlight effect.
+    </p>
+
+  </div>
+
+  <!-- Truncate Directive -->
+  <div class="card">
+
+    <h2>Truncate Directive</h2>
+
+    <p appTruncate [maxChars]="30">
+      This is a very long e-commerce product description that demonstrates the custom truncate directive.
+    </p>
+
+  </div>
+
+  <!-- Truncate Pipe -->
+  <div class="card">
+
+    <h2>Truncate Pipe</h2>
+
+    <p>
+      {{ 'Angular Ecommerce Assignment Example' | truncate:20 }}
+    </p>
+
+  </div>
+
+  <!-- Rupee Pipe -->
+  <div class="card">
+
+    <h2>Rupee Pipe</h2>
+
+    <p>
+      {{ 125000 | rupee }}
+    </p>
+
+  </div>
+
+</div>
