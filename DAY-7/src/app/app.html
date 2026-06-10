@@ -1,0 +1,25 @@
+<div class="parent">
+
+  <h1>Assignment 1</h1>
+
+  <button (click)="changeInput()">
+    Change Input
+  </button>
+
+  <button (click)="toggleComponent()">
+    Toggle Component
+  </button>
+
+  <br><br>
+
+  <app-lifecycle-logger
+    *ngIf="showComponent"
+    [data]="message">
+  </app-lifecycle-logger>
+
+</div>
+
+<hr>
+
+<app-parent-counter>
+</app-parent-counter>
