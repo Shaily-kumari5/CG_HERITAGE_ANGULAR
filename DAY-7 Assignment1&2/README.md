@@ -1,59 +1,234 @@
-# Day7Assignment
+<div align="center">
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+# 🚀 DAY-7 Assignment 1 & 2
+### Angular Component Communication & Lifecycle Hooks
 
-## Development server
+<img src="https://img.shields.io/badge/Angular-20+-red?style=for-the-badge&logo=angular" />
+<img src="https://img.shields.io/badge/TypeScript-Latest-blue?style=for-the-badge&logo=typescript" />
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" />
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+### 📚 CG Heritage Angular Training Program
+
+</div>
+
+---
+
+# 📖 Project Overview
+
+This project contains two Angular assignments designed to strengthen understanding of:
+
+✨ Parent-Child Component Communication
+
+✨ Angular Lifecycle Hooks
+
+✨ Data Binding
+
+✨ Component Interaction
+
+✨ Change Detection Process
+
+---
+
+# 🎯 Assignment 1: Parent ➜ Child Communication
+
+## Objective
+
+Learn how data flows between Angular components using the powerful `@Input()` decorator.
+
+### Features
+
+✅ Parent Component Counter
+
+✅ Increment Button
+
+✅ Real-Time Data Updates
+
+✅ Child Component Data Display
+
+✅ Property Binding
+
+---
+
+## Workflow
+
+```text
+Parent Component
+      │
+      ▼
+ @Input() Binding
+      │
+      ▼
+Child Component
+      │
+      ▼
+Displays Updated Counter
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Concepts Covered
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Concept | Description |
+|----------|-------------|
+| @Input() | Pass data from Parent to Child |
+| Property Binding | Bind values dynamically |
+| Event Binding | Handle user interactions |
+| Component Communication | Share data across components |
 
-```bash
-ng generate component component-name
+---
+
+# 🔄 Assignment 2: Angular Lifecycle Hooks
+
+## Objective
+
+Understand Angular's component lifecycle and the order in which lifecycle hooks execute.
+
+---
+
+## Lifecycle Hooks Implemented
+
+### 🔹 ngOnChanges()
+
+Triggered whenever input properties change.
+
+### 🔹 ngOnInit()
+
+Runs once after component initialization.
+
+### 🔹 ngDoCheck()
+
+Runs during every change detection cycle.
+
+### 🔹 ngAfterContentInit()
+
+Runs after projected content initialization.
+
+### 🔹 ngAfterContentChecked()
+
+Runs after projected content checking.
+
+### 🔹 ngAfterViewInit()
+
+Runs after component view initialization.
+
+### 🔹 ngAfterViewChecked()
+
+Runs after component view checking.
+
+### 🔹 ngOnDestroy()
+
+Runs before component destruction.
+
+---
+
+# 🔍 Lifecycle Flow
+
+```text
+ngOnChanges()
+      ↓
+ngOnInit()
+      ↓
+ngDoCheck()
+      ↓
+ngAfterContentInit()
+      ↓
+ngAfterContentChecked()
+      ↓
+ngAfterViewInit()
+      ↓
+ngAfterViewChecked()
+      ↓
+ngOnDestroy()
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|----------|
+| Angular | Frontend Framework |
+| TypeScript | Application Logic |
+| HTML5 | Structure |
+| CSS3 | Styling |
+
+---
+
+# 📂 Project Structure
+
+```text
+DAY-7
+│
+├── src
+│   │
+│   ├── app
+│   │   │
+│   │   ├── parent
+│   │   │   ├── parent.ts
+│   │   │   ├── parent.html
+│   │   │   └── parent.css
+│   │   │
+│   │   ├── child
+│   │   │   ├── child.ts
+│   │   │   ├── child.html
+│   │   │   └── child.css
+│   │   │
+│   │   └── lifecycle-logger
+│   │       ├── lifecycle-logger.ts
+│   │       ├── lifecycle-logger.html
+│   │       └── lifecycle-logger.css
+│   │
+│   ├── app.ts
+│   ├── app.html
+│   └── app.css
+│
+├── angular.json
+├── package.json
+└── README.md
 ```
 
-## Building
+---
 
-To build the project run:
+# 🎓 Learning Outcomes
 
-```bash
-ng build
-```
+✅ Understanding Angular Components
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+✅ Parent-Child Data Communication
 
-## Running unit tests
+✅ @Input() Decorator
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+✅ Event Binding
 
-```bash
-ng test
-```
+✅ Angular Lifecycle Hooks
 
-## Running end-to-end tests
+✅ Component Initialization
 
-For end-to-end (e2e) testing, run:
+✅ Change Detection Mechanism
 
-```bash
-ng e2e
-```
+✅ Component Destruction
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+# 🌟 Key Takeaways
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Angular components communicate efficiently using `@Input()` and `@Output()`.
+
+> Lifecycle hooks provide complete control over component creation, updates, rendering, and destruction.
+
+> Understanding component lifecycle is essential for building scalable Angular applications.
+
+---
+
+<div align="center">
+
+## 👨‍💻 Author
+
+### Aman Kumar
+
+🚀 Angular Training - Day 7 Assignment
+
+⭐ If you found this project useful, don't forget to star the repository!
+
+</div>
