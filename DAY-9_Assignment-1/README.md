@@ -142,7 +142,7 @@ getApiMessage()
 
 🟢 **Green Badge**
 
-![Development Environment](src/Images/Staging.png)
+![Development Environment](src/Images/Development.png)
 
 ---
 
