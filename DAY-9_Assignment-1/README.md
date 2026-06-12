@@ -1,59 +1,330 @@
-# EnvDemoApp
+# 🌍 Environment Demo App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+> **DAY-9 Assignment - Angular Multi-Environment Configuration**
 
-## Development server
+An Angular application demonstrating the use of multiple environments (**Development, Staging, and Production**) using Angular Environment Files, Environment Service, Feature Flags, and Environment-Specific Configuration.
 
-To start a local development server, run:
+---
+
+## 📌 Assignment Objectives
+
+This project demonstrates:
+
+* Angular Environment Configuration
+* Environment File Replacement
+* Development, Staging, and Production Environments
+* Environment Service
+* Feature Flags
+* Environment-Specific Behavior
+* Build Configurations
+* API Endpoint Management
+* Application Version Management
+
+---
+
+## 🚀 Technologies Used
+
+* Angular 19+
+* TypeScript
+* HTML5
+* CSS3
+* Angular CLI
+
+---
+
+## 📂 Project Structure
+
+```text
+env-demo-app
+│
+├── src
+│   │
+│   ├── Images
+│   │   ├── Development.png
+│   │   ├── Staging.png
+│   │   └── Production.png
+│   │
+│   ├── environments
+│   │   ├── environment.ts
+│   │   ├── environment.staging.ts
+│   │   └── environment.prod.ts
+│   │
+│   ├── app
+│   │   ├── services
+│   │   │   └── environment.service.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   ├── app.css
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   │
+│   ├── main.ts
+│   └── styles.css
+│
+├── angular.json
+├── package.json
+└── README.md
+```
+
+---
+
+# ⚙️ Environment Configuration
+
+## Development Environment
+
+```typescript
+apiUrl: https://dev-api.example.com
+appVersion: 1.0.0-dev
+enableDarkMode: true
+enableAnalytics: false
+```
+
+## Staging Environment
+
+```typescript
+apiUrl: https://staging-api.example.com
+appVersion: 1.0.0-staging
+enableDarkMode: true
+enableAnalytics: true
+```
+
+## Production Environment
+
+```typescript
+apiUrl: https://api.example.com
+appVersion: 1.0.0
+enableDarkMode: false
+enableAnalytics: true
+```
+
+---
+
+# 🛠️ Environment Service Features
+
+The application includes a dedicated Environment Service that:
+
+* Retrieves environment configuration
+* Checks feature availability
+* Provides environment-specific API messages
+* Handles environment-specific behavior
+
+### Service Methods
+
+```typescript
+getEnvironment()
+isFeatureEnabled(featureName)
+getApiMessage()
+```
+
+---
+
+# 🎨 Application Features
+
+✅ Environment Badge
+
+✅ API URL Display
+
+✅ App Version Display
+
+✅ Environment Message Display
+
+✅ Feature Flags Display
+
+✅ Environment-Specific Configuration
+
+✅ Multi-Environment Build Support
+
+---
+
+# 🖥️ Application Output
+
+## Development Environment
+
+🟢 **Green Badge**
+
+![Development Environment](src/Images/Development.png)
+
+---
+
+## Staging Environment
+
+🟠 **Orange Badge**
+
+![Staging Environment](src/Images/Staging.png)
+
+---
+
+## Production Environment
+
+🔴 **Red Badge**
+
+![Production Environment](src/Images/Production.png)
+
+---
+
+# 📸 Environment Verification
+
+### Development Environment
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**Output Details**
 
-## Code scaffolding
+* Environment: Development
+* API URL: https://dev-api.example.com
+* Version: 1.0.0-dev
+* Dark Mode: Enabled
+* Analytics: Disabled
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
+
+### Staging Environment
 
 ```bash
-ng generate component component-name
+ng serve --configuration=staging
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**Output Details**
+
+* Environment: Staging
+* API URL: https://staging-api.example.com
+* Version: 1.0.0-staging
+* Dark Mode: Enabled
+* Analytics: Enabled
+
+---
+
+### Production Environment
 
 ```bash
-ng generate --help
+ng serve --configuration=production
 ```
 
-## Building
+**Output Details**
 
-To build the project run:
+* Environment: Production
+* API URL: https://api.example.com
+* Version: 1.0.0
+* Dark Mode: Disabled
+* Analytics: Enabled
+
+---
+
+# 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to project directory:
+
+```bash
+cd env-demo-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+# ▶️ Run Application
+
+## Development
+
+```bash
+ng serve
+```
+
+Open:
+
+```text
+http://localhost:4200
+```
+
+## Staging
+
+```bash
+ng serve --configuration=staging
+```
+
+## Production
+
+```bash
+ng serve --configuration=production
+```
+
+---
+
+# 🏗️ Build Commands
+
+## Development Build
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Staging Build
 
 ```bash
-ng test
+ng build --configuration=staging
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## Production Build
 
 ```bash
-ng e2e
+ng build --configuration=production
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+# 📊 Environment Comparison
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| Feature     | Development         | Staging                 | Production      |
+| ----------- | ------------------- | ----------------------- | --------------- |
+| API URL     | dev-api.example.com | staging-api.example.com | api.example.com |
+| App Version | 1.0.0-dev           | 1.0.0-staging           | 1.0.0           |
+| Dark Mode   | ✅ Enabled           | ✅ Enabled               | ❌ Disabled      |
+| Analytics   | ❌ Disabled          | ✅ Enabled               | ✅ Enabled       |
+| Badge Color | 🟢 Green            | 🟠 Orange               | 🔴 Red          |
+
+---
+
+# 🎯 Assignment Requirements Covered
+
+| Requirement                   | Status |
+| ----------------------------- | ------ |
+| Angular Project Creation      | ✅      |
+| Environment Files             | ✅      |
+| Staging Configuration         | ✅      |
+| Production Configuration      | ✅      |
+| Environment Service           | ✅      |
+| Feature Flags                 | ✅      |
+| API URL Management            | ✅      |
+| App Version Management        | ✅      |
+| Environment-Specific Behavior | ✅      |
+| UI Display                    | ✅      |
+| Build Configurations          | ✅      |
+| README Documentation          | ✅      |
+
+---
+
+# 👨‍💻 Author
+
+**Aman Kumar**
+
+B.Tech Computer Science Engineering
+
+NIST University
+
+---
+
+# ⭐ Conclusion
+
+This project successfully demonstrates Angular's multi-environment configuration using Development, Staging, and Production environments. The application dynamically switches configurations using Angular's file replacement mechanism and showcases environment-specific behavior through a dedicated Environment Service.
