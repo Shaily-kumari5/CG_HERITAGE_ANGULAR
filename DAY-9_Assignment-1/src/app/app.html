@@ -1,0 +1,44 @@
+<div class="container">
+
+  <h1>{{ envData.appName }}</h1>
+
+  <div class="badge" [ngClass]="getBadgeClass()">
+    {{ getEnvironmentName() }}
+  </div>
+
+  <div class="card">
+
+    <h2>Environment Information</h2>
+
+    <p>
+      <strong>API URL:</strong>
+      {{ envData.apiUrl }}
+    </p>
+
+    <p>
+      <strong>App Version:</strong>
+      {{ envData.appVersion }}
+    </p>
+
+    <p>
+      <strong>Environment Message:</strong>
+      {{ apiMessage }}
+    </p>
+
+    <hr>
+
+    <h3>Feature Flags</h3>
+
+    <p>
+      <strong>Dark Mode:</strong>
+      {{ isFeatureEnabled('enableDarkMode') ? 'Enabled' : 'Disabled' }}
+    </p>
+
+    <p>
+      <strong>Analytics:</strong>
+      {{ isFeatureEnabled('enableAnalytics') ? 'Enabled' : 'Disabled' }}
+    </p>
+
+  </div>
+
+</div>
