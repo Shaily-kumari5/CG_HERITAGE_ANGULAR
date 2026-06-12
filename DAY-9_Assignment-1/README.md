@@ -320,11 +320,8 @@ ng build --configuration=production
 
 # 👨‍💻 Author
 
-**Aman Kumar**
+**Shaily Kumari**
 
-B.Tech Computer Science Engineering
-
-NIST University
 
 ---
 
