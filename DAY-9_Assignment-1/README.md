@@ -142,7 +142,7 @@ getApiMessage()
 
 🟢 **Green Badge**
 
-![Development Environment]("C:\Users\Administrator\Pictures\Screenshots\Development.png")
+![Development Environment](src/Images/Staging.png)
 
 ---
 
