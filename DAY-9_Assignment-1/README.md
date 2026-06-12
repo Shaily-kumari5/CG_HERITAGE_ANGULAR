@@ -1,8 +1,6 @@
 # 🌍 Environment Demo App
 
 > **DAY-9 Assignment - Angular Multi-Environment Configuration**
-> ### ✨ Enterprise-Level Angular Architecture with Feature Modules, Shared Modules, Lazy Loading & Reusable Components
-
 <img src="https://img.shields.io/badge/Angular-20-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 <br>
