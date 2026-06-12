@@ -318,12 +318,27 @@ ng build --configuration=production
 
 ---
 
-# 👨‍💻 Author
+# 👩‍💻 Developer
 
-**Shaily Kumari**
+<div align="center">
 
+## Shaily Kumari
+
+### Angular Developer • Frontend Enthusiast • Lifelong Learner
+
+Building modern, scalable, and user-friendly web applications using Angular.
+
+</div>
 
 ---
+
+<div align="center">
+
+### 🌟 If you found this project useful, don't forget to leave a Star ⭐
+
+### Made with ❤️ using Angular, TypeScript & SCSS
+
+</div>
 
 # ⭐ Conclusion
 
