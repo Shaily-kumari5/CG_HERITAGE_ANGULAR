@@ -1,59 +1,186 @@
-# StudentApp
+# 🚀 Day 12 Assignment - Angular Router Multi-Page SPA
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+## 📌 Overview
 
-## Development server
+This project demonstrates Angular Routing by building a Multi-Page Single Page Application (SPA) using Angular Router.
 
-To start a local development server, run:
+The application contains:
+
+* Home Page
+* About Page
+* Students Page
+* Student Detail Page
+* Dynamic Routing
+* Route Parameters
+* Query Parameters
+* Navigation Bar with Active Link Highlighting
+
+---
+
+## 🎯 Assignment Requirements
+
+### ✅ Home Component
+
+Displays the landing page of the application.
+
+### ✅ About Component
+
+Displays information about the project.
+
+### ✅ Students Component
+
+Displays a list of students and provides search functionality.
+
+### ✅ Student Detail Component
+
+Displays the selected student's ID using route parameters.
+
+### ✅ Angular Router
+
+Configured routes:
+
+| Route         | Component      |
+| ------------- | -------------- |
+| /             | Home           |
+| /about        | About          |
+| /students     | Students       |
+| /students/:id | Student Detail |
+
+---
+
+## 🛠 Technologies Used
+
+* Angular 20
+* TypeScript
+* HTML5
+* CSS3
+* Angular Router
+
+---
+
+## ✨ Features
+
+### Navigation Bar
+
+* Home
+* About
+* Students
+* Active route highlighting
+
+### Dynamic Routing
+
+Clicking a student navigates to:
 
 ```bash
+/students/:id
+```
+
+Example:
+
+```bash
+/students/101
+```
+
+### Route Parameters
+
+Uses:
+
+```ts
+ActivatedRoute
+```
+
+to retrieve the student ID.
+
+### Go Back Navigation
+
+Uses:
+
+```ts
+Router.navigate()
+```
+
+to return to the Students page.
+
+### Bonus Feature - Query Parameters
+
+Search student name:
+
+```bash
+/students?search=Aman
+```
+
+Displays entered search value dynamically.
+
+---
+
+## 📷 Application Screenshots
+
+### Home Page
+
+![Home](Images/home.png)
+
+### About Page
+
+![About](Images/about.png)
+
+### Students Page
+
+![Students](Images/students.png)
+
+### Student Detail Page
+
+![Student Detail](Images/student-detail.png)
+
+---
+
+## 📂 Project Structure
+
+```text
+DAY-12
+│
+├── student-app
+│
+├── Images
+│   ├── home.png
+│   ├── about.png
+│   ├── students.png
+│   └── student-detail.png
+│
+└── README.md
+```
+
+---
+
+## ▶️ Run Project
+
+```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Navigate to:
 
 ```bash
-ng generate component component-name
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📚 Learning Outcomes
 
-## Building
+* Angular Routing
+* RouterLink
+* RouterLinkActive
+* Dynamic Routes
+* Route Parameters
+* Query Parameters
+* Navigation between Components
+* Single Page Application Architecture
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 👨‍💻 Author
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Shaily Kumar
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angular Heritage Training Program - Day 12 Assignment
