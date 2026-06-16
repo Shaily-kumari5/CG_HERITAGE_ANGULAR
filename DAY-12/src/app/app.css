@@ -1,0 +1,63 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fc;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Nav Links */
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  transform: translateY(-2px);
+}
+
+/* Active Link */
+.active {
+  background: white;
+  color: #2563eb !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Content Area */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h2 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #475569;
+  line-height: 1.6;
+}

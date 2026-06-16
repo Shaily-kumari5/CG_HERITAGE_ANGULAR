@@ -1,0 +1,30 @@
+<h2>Students Page</h2>
+
+<h3>Search Student (Bonus)</h3>
+
+<input
+  type="text"
+  [(ngModel)]="searchText"
+  placeholder="Enter Student Name">
+
+<button (click)="searchStudent()">
+  Search
+</button>
+
+<p *ngIf="searchValue">
+  Search Value: {{ searchValue }}
+</p>
+
+<hr>
+
+<h3>Student List</h3>
+
+<ul>
+  <li *ngFor="let student of students">
+
+    <a [routerLink]="['/students', student.id]">
+      {{ student.name }}
+    </a>
+
+  </li>
+</ul>
