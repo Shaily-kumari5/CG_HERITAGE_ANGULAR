@@ -1,132 +1,134 @@
-# 🚀 Day 12 Assignment - Angular Router Multi-Page SPA
+# 🚀 Day 12 — Angular Router Multi-Page SPA
 
-## 📌 Overview
+<div align="center">
 
-This project demonstrates Angular Routing by building a Multi-Page Single Page Application (SPA) using Angular Router.
+![Angular](https://img.shields.io/badge/Angular-20-red?style=for-the-badge\&logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=for-the-badge\&logo=typescript)
+![Router](https://img.shields.io/badge/Angular_Router-Dynamic_Routing-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-The application contains:
+### 🌐 Multi-Page Single Page Application using Angular Router
 
-* Home Page
-* About Page
-* Students Page
-* Student Detail Page
-* Dynamic Routing
-* Route Parameters
-* Query Parameters
-* Navigation Bar with Active Link Highlighting
+A modern Angular application demonstrating routing, navigation, route parameters, query parameters, and dynamic page rendering using Angular Router.
+
+</div>
 
 ---
 
-## 🎯 Assignment Requirements
+## 📖 Project Overview
 
-### ✅ Home Component
+This project is part of the **Angular Heritage Training Program - Day 12 Assignment**.
 
-Displays the landing page of the application.
+The goal of this assignment is to understand and implement:
 
-### ✅ About Component
+✅ Angular Router
 
-Displays information about the project.
+✅ Multi-Page SPA Architecture
 
-### ✅ Students Component
+✅ Route Navigation
 
-Displays a list of students and provides search functionality.
+✅ Dynamic Route Parameters
 
-### ✅ Student Detail Component
+✅ Query Parameters
 
-Displays the selected student's ID using route parameters.
+✅ RouterLink & RouterLinkActive
 
-### ✅ Angular Router
-
-Configured routes:
-
-| Route         | Component      |
-| ------------- | -------------- |
-| /             | Home           |
-| /about        | About          |
-| /students     | Students       |
-| /students/:id | Student Detail |
-
----
-
-## 🛠 Technologies Used
-
-* Angular 20
-* TypeScript
-* HTML5
-* CSS3
-* Angular Router
+✅ Programmatic Navigation
 
 ---
 
 ## ✨ Features
 
-### Navigation Bar
+### 🏠 Home Page
 
-* Home
-* About
-* Students
-* Active route highlighting
+* Welcome screen of the application
+* Acts as the default route
 
-### Dynamic Routing
+### ℹ️ About Page
 
-Clicking a student navigates to:
+* Displays project information
+* Demonstrates navigation between components
 
-```bash
-/students/:id
-```
+### 🎓 Students Page
 
-Example:
+* Displays a list of students
+* Each student is clickable
+* Supports query parameter search
+
+### 👤 Student Detail Page
+
+* Displays selected student information
+* Reads student ID from URL
+* Includes "Go Back" navigation
+
+### 🔥 Active Navigation Highlight
+
+* Current route is visually highlighted
+* Uses Angular's `routerLinkActive`
+
+---
+
+## 🛣 Routing Configuration
+
+| Route           | Description     |
+| --------------- | --------------- |
+| `/`             | Home Page       |
+| `/about`        | About Page      |
+| `/students`     | Students List   |
+| `/students/:id` | Student Details |
+
+### Example
 
 ```bash
 /students/101
 ```
 
-### Route Parameters
+Displays:
 
-Uses:
-
-```ts
-ActivatedRoute
+```text
+Viewing Student ID: 101
 ```
 
-to retrieve the student ID.
+---
 
-### Go Back Navigation
+## 🎯 Bonus Implementation
 
-Uses:
+### Query Parameters
 
-```ts
-Router.navigate()
-```
+Search functionality implemented using Angular Query Parameters.
 
-to return to the Students page.
-
-### Bonus Feature - Query Parameters
-
-Search student name:
+Example URL:
 
 ```bash
 /students?search=Aman
 ```
 
-Displays entered search value dynamically.
+Output:
+
+```text
+Search Value: Aman
+```
+
+Technologies Used:
+
+```ts
+ActivatedRoute
+queryParams
+Router.navigate()
+```
 
 ---
 
-## 📷 Application Screenshots
+## 🛠 Tech Stack
 
-### Home Page
-
-![Home](src/Images/home.png)
-
-### About Page
-
-![About](src/Images/about.png)
-
-### Students Page
-
-![Students](src/Images/student.png)
-
+| Technology     | Purpose              |
+| -------------- | -------------------- |
+| Angular 20     | Frontend Framework   |
+| TypeScript     | Application Logic    |
+| HTML5          | Structure            |
+| CSS3           | Styling              |
+| Angular Router | Navigation           |
+| FormsModule    | Search Functionality |
 
 ---
 
@@ -135,27 +137,77 @@ Displays entered search value dynamically.
 ```text
 DAY-12
 │
-├── student-app
-│
-├── Images
-│   ├── home.png
-│   ├── about.png
-│   ├── students.png
-│   └── student-detail.png
+├── src
+│   ├── app
+│   │   ├── components
+│   │   │   ├── home
+│   │   │   ├── about
+│   │   │   ├── students
+│   │   │   └── student-detail
+│   │   │
+│   │   ├── app.routes.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   └── app.css
+│   │
+│   └── Images
+│       ├── home.png
+│       ├── about.png
+│       ├── student.png
+│       └── student-detail.png
 │
 └── README.md
 ```
 
 ---
 
-## ▶️ Run Project
+# 📸 Application Screenshots
+
+## 🏠 Home Page
+
+![Home Page](src/Images/home.png)
+
+---
+
+## ℹ️ About Page
+
+![About Page](src/Images/about.png)
+
+---
+
+## 🎓 Students Page
+
+![Students Page](src/Images/student.png)
+
+---
+
+## ▶️ Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+### Navigate to Project
+
+```bash
+cd DAY-12
+```
+
+### Install Dependencies
 
 ```bash
 npm install
+```
+
+### Start Development Server
+
+```bash
 ng serve
 ```
 
-Navigate to:
+### Open Browser
 
 ```bash
 http://localhost:4200
@@ -165,19 +217,43 @@ http://localhost:4200
 
 ## 📚 Learning Outcomes
 
-* Angular Routing
-* RouterLink
-* RouterLinkActive
-* Dynamic Routes
-* Route Parameters
+Through this assignment, I learned:
+
+* Angular Routing Fundamentals
+* Route Configuration
+* Dynamic Route Parameters
 * Query Parameters
-* Navigation between Components
-* Single Page Application Architecture
+* Navigation Between Components
+* RouterLink & RouterLinkActive
+* Programmatic Navigation
+* Single Page Application (SPA) Design
 
 ---
 
-## 👨‍💻 Author
+## ✅ Assignment Completion Checklist
 
-Shaily Kumar
+* [x] Angular Project with Routing
+* [x] Home Component
+* [x] About Component
+* [x] Students Component
+* [x] Student Detail Component
+* [x] Navigation Bar
+* [x] Active Route Highlight
+* [x] Route Parameters
+* [x] Query Parameters
+* [x] Programmatic Navigation
+* [x] Bonus Search Feature
 
-Angular Heritage Training Program - Day 12 Assignment
+---
+
+<div align="center">
+
+### 👨‍💻 Developed By
+
+# Shaily Kumar
+
+### Angular Heritage Training Program — Day 12 Assignment
+
+⭐ If you found this project useful, consider giving it a star!
+
+</div>
