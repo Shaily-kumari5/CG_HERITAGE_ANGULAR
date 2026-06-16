@@ -117,19 +117,16 @@ Displays entered search value dynamically.
 
 ### Home Page
 
-![Home](Images/home.png)
+![Home](src/Images/home.png)
 
 ### About Page
 
-![About](Images/about.png)
+![About](src/Images/about.png)
 
 ### Students Page
 
-![Students](Images/students.png)
+![Students](src/Images/students.png)
 
-### Student Detail Page
-
-![Student Detail](Images/student-detail.png)
 
 ---
 
