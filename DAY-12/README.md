@@ -125,7 +125,7 @@ Displays entered search value dynamically.
 
 ### Students Page
 
-![Students](src/Images/students.png)
+![Students](src/Images/student.png)
 
 
 ---
