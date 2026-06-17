@@ -1,0 +1,32 @@
+<div class="detail-container">
+
+  <h1>Student Details</h1>
+
+  <p>
+    <strong>ID:</strong>
+    {{ student.id }}
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    {{ student.name }}
+  </p>
+
+  <p>
+    <strong>Course:</strong>
+    {{ student.course }}
+  </p>
+
+  <div class="buttons">
+
+    <button (click)="backToStudents()">
+      Back To Students
+    </button>
+
+    <button (click)="backToDashboard()">
+      Back To Dashboard
+    </button>
+
+  </div>
+
+</div>

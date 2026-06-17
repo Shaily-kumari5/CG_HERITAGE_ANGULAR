@@ -1,0 +1,177 @@
+/* Custom Animations */
+@keyframes listEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes itemReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes atmosphericFloat {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(236, 72, 153, 0.15);
+  }
+}
+
+/* Page Wrapper setup */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Matching your premium twilight horizon background palette */
+  background: linear-gradient(135deg, #2e0854 0%, #4a148c 40%, #880e4f 70%, #1a0033 100%);
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+}
+
+/* Glassmorphic Container Card */
+.student-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 45px 35px;
+  border-radius: 24px;
+  
+  /* Frosted landscape look matching the reference precisely */
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* Crisp, thin semi-translucent white border */
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-sizing: border-box;
+
+  /* CSS Physics Animations */
+  animation: 
+    listEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    atmosphericFloat 5s ease-in-out infinite alternate;
+}
+
+/* Heading */
+.student-container h1 {
+  color: #ffffff;
+  font-size: 2.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 35px 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* List Formatting */
+.student-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* List Item Container */
+.student-container li {
+  animation: itemReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Interactive Link Rows */
+.student-container li a {
+  display: block;
+  padding: 16px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.05rem;
+  border-radius: 14px;
+  /* Ultra-subtle inner glass container layers */
+  background: rgba(255, 255, 255, 0.04);
+  
+  /* Clean borderless execution */
+  border: 0 !important;
+  outline: none !important;
+  
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Smooth Interactive States for List Rows */
+.student-container li a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: translateX(4px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.student-container li a:active {
+  transform: translateX(2px) scale(0.99);
+}
+
+/* White Pill-Shaped Dashboard Navigation Button */
+.student-container button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px; /* Pillow-shaped geometry from reference layout */
+  background: #ffffff;
+  color: #311042;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  
+  border: none !important;
+  outline: none !important;
+  
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Navigation Button Hover State */
+.student-container button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.25);
+}
+
+.student-container button:active {
+  transform: scale(0.99);
+}
+
+/* Clean up spacing from the native <br> tag */
+.student-container br {
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .student-container {
+    padding: 35px 24px;
+    margin: 10px;
+  }
+
+  .student-container h1 {
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+  }
+  
+  .student-container li a {
+    font-size: 0.95rem;
+    padding: 14px 16px;
+  }
+}
