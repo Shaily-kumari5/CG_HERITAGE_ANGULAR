@@ -1,0 +1,104 @@
+<div class="form-card">
+  <h2>Student Registration</h2>
+
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- Full Name -->
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input id="fullName" type="text" formControlName="fullName"
+             [class.invalid]="f.fullName.touched && f.fullName.invalid" />
+      <div class="error" *ngIf="f.fullName.touched && f.fullName.invalid">
+        <small *ngIf="f.fullName.errors?.['required']">Full Name is required.</small>
+        <small *ngIf="f.fullName.errors?.['minlength']">
+          Full Name must be at least {{ f.fullName.errors?.['minlength'].requiredLength }} characters.
+        </small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email"
+             [class.invalid]="f.email.touched && f.email.invalid" />
+      <div class="error" *ngIf="f.email.touched && f.email.invalid">
+        <small *ngIf="f.email.errors?.['required']">Email is required.</small>
+        <small *ngIf="f.email.errors?.['email']">Please enter a valid email address.</small>
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="text" formControlName="phone" placeholder="10-digit number"
+             [class.invalid]="f.phone.touched && f.phone.invalid" />
+      <div class="error" *ngIf="f.phone.touched && f.phone.invalid">
+        <small *ngIf="f.phone.errors?.['required']">Phone number is required.</small>
+        <small *ngIf="f.phone.errors?.['pattern']">Enter a valid 10-digit phone number.</small>
+      </div>
+    </div>
+
+    <!-- Course -->
+    <div class="form-group">
+      <label for="course">Course</label>
+      <input id="course" type="text" formControlName="course"
+             [class.invalid]="f.course.touched && f.course.invalid" />
+      <div class="error" *ngIf="f.course.touched && f.course.invalid">
+        <small *ngIf="f.course.errors?.['required']">Course is required.</small>
+      </div>
+    </div>
+
+    <!-- Q5(a): Date of Birth — required + minimum age 16 -->
+    <div class="form-group">
+      <label for="dateOfBirth">Date of Birth</label>
+      <input id="dateOfBirth" type="date" formControlName="dateOfBirth"
+             [class.invalid]="f.dateOfBirth.touched && f.dateOfBirth.invalid" />
+      <div class="error" *ngIf="f.dateOfBirth.touched && f.dateOfBirth.invalid">
+        <small *ngIf="f.dateOfBirth.errors?.['required']">Date of Birth is required.</small>
+        <small *ngIf="f.dateOfBirth.errors?.['underAge']">
+          You must be at least {{ f.dateOfBirth.errors?.['underAge'].requiredAge }} years old
+          (current age: {{ f.dateOfBirth.errors?.['underAge'].actualAge }}).
+        </small>
+      </div>
+    </div>
+
+    <!-- Q5(b): Gender — required dropdown -->
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" formControlName="gender"
+              [class.invalid]="f.gender.touched && f.gender.invalid">
+        <option value="" disabled selected>Select gender</option>
+        <option *ngFor="let option of genderOptions" [value]="option">{{ option }}</option>
+      </select>
+      <div class="error" *ngIf="f.gender.touched && f.gender.invalid">
+        <small *ngIf="f.gender.errors?.['required']">Please select a gender.</small>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Register</button>
+      <button type="button" (click)="onReset()">Reset</button>
+    </div>
+  </form>
+
+  <div class="success" *ngIf="submittedData">
+    <h3>Registration Successful ✅</h3>
+    <pre>{{ submittedData | json }}</pre>
+  </div>
+</div>
+
+<style>
+  .form-card { max-width: 480px; margin: 2rem auto; font-family: Arial, sans-serif; }
+  .form-group { margin-bottom: 1rem; display: flex; flex-direction: column; }
+  label { font-weight: 600; margin-bottom: 0.25rem; }
+  input, select { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem; }
+  input.invalid, select.invalid { border-color: #d93025; }
+  .error { color: #d93025; margin-top: 0.25rem; }
+  .error small { display: block; }
+  .actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
+  button { padding: 0.5rem 1.25rem; border-radius: 4px; border: none; cursor: pointer; }
+  button[type="submit"] { background: #1a73e8; color: #fff; }
+  button[type="button"] { background: #eee; }
+  .success { margin-top: 1.5rem; padding: 1rem; background: #e6f4ea; border-radius: 6px; }
+  .success pre { white-space: pre-wrap; word-break: break-word; }
+</style>

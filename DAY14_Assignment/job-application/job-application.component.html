@@ -1,0 +1,95 @@
+<div class="form-card">
+  <h2>Job Application</h2>
+
+  <form [formGroup]="jobApplicationForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- Full Name -->
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input id="fullName" type="text" formControlName="fullName"
+             [class.invalid]="f.fullName.touched && f.fullName.invalid" />
+      <div class="error" *ngIf="f.fullName.touched && f.fullName.invalid">
+        <small *ngIf="f.fullName.errors?.['required']">Full Name is required.</small>
+        <small *ngIf="f.fullName.errors?.['minlength']">
+          Full Name must be at least {{ f.fullName.errors?.['minlength'].requiredLength }} characters.
+        </small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email"
+             [class.invalid]="f.email.touched && f.email.invalid" />
+      <div class="error" *ngIf="f.email.touched && f.email.invalid">
+        <small *ngIf="f.email.errors?.['required']">Email is required.</small>
+        <small *ngIf="f.email.errors?.['email']">Please enter a valid email address.</small>
+      </div>
+    </div>
+
+    <!-- Years of Experience -->
+    <div class="form-group">
+      <label for="yearsOfExperience">Years of Experience</label>
+      <input id="yearsOfExperience" type="number" formControlName="yearsOfExperience"
+             [class.invalid]="f.yearsOfExperience.touched && f.yearsOfExperience.invalid" />
+      <div class="error" *ngIf="f.yearsOfExperience.touched && f.yearsOfExperience.invalid">
+        <small *ngIf="f.yearsOfExperience.errors?.['required']">Years of Experience is required.</small>
+        <small *ngIf="f.yearsOfExperience.errors?.['min']">Experience cannot be negative.</small>
+        <small *ngIf="f.yearsOfExperience.errors?.['max']">Experience cannot exceed 40 years.</small>
+      </div>
+    </div>
+
+    <!-- Job Role -->
+    <div class="form-group">
+      <label for="jobRole">Job Role</label>
+      <select id="jobRole" formControlName="jobRole"
+              [class.invalid]="f.jobRole.touched && f.jobRole.invalid">
+        <option value="" disabled selected>Select a role</option>
+        <option *ngFor="let role of jobRoles" [value]="role">{{ role }}</option>
+      </select>
+      <div class="error" *ngIf="f.jobRole.touched && f.jobRole.invalid">
+        <small *ngIf="f.jobRole.errors?.['required']">Job Role is required.</small>
+      </div>
+    </div>
+
+    <!-- Additional Comments — demonstrates the noProfanityValidator (Q3) -->
+    <div class="form-group">
+      <label for="additionalComments">Additional Comments (optional)</label>
+      <textarea id="additionalComments" rows="3" formControlName="additionalComments"
+                [class.invalid]="f.additionalComments.touched && f.additionalComments.invalid"></textarea>
+      <div class="error" *ngIf="f.additionalComments.touched && f.additionalComments.invalid">
+        <small *ngIf="f.additionalComments.errors?.['hasProfanity']">
+          Please remove inappropriate language from your comments.
+        </small>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit">Submit Application</button>
+      <button type="button" (click)="onReset()">Reset</button>
+    </div>
+  </form>
+
+  <div class="success" *ngIf="submittedData">
+    <h3>Application Submitted ✅</h3>
+    <pre>{{ submittedData | json }}</pre>
+  </div>
+</div>
+
+<style>
+  .form-card { max-width: 480px; margin: 2rem auto; font-family: Arial, sans-serif; }
+  .form-group { margin-bottom: 1rem; display: flex; flex-direction: column; }
+  label { font-weight: 600; margin-bottom: 0.25rem; }
+  input, select, textarea {
+    padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; font-size: 0.95rem;
+  }
+  input.invalid, select.invalid, textarea.invalid { border-color: #d93025; }
+  .error { color: #d93025; margin-top: 0.25rem; }
+  .error small { display: block; }
+  .actions { display: flex; gap: 0.75rem; margin-top: 1rem; }
+  button { padding: 0.5rem 1.25rem; border-radius: 4px; border: none; cursor: pointer; }
+  button[type="submit"] { background: #1a73e8; color: #fff; }
+  button[type="button"] { background: #eee; }
+  .success { margin-top: 1.5rem; padding: 1rem; background: #e6f4ea; border-radius: 6px; }
+  .success pre { white-space: pre-wrap; word-break: break-word; }
+</style>
