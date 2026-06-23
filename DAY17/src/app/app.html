@@ -1,0 +1,72 @@
+<div class="container">
+
+  <h1>RxJS Assignment</h1>
+
+  <div class="card">
+
+    <h2>Task 1 Output</h2>
+
+    <h3>Observable Output</h3>
+    <p>{{observableOutput}}</p>
+
+    <h3>of() Output</h3>
+    <p>{{ofOutput}}</p>
+
+    <h3>from() Output</h3>
+    <p>{{fromOutput}}</p>
+
+    <h3>interval() Output</h3>
+    <p>{{intervalOutput}}</p>
+
+    <h3>timer() Output</h3>
+    <p>{{timerOutput}}</p>
+
+  </div>
+
+  <div class="card">
+
+    <h2>Task 2 Output</h2>
+
+    <h3>map + tap + filter</h3>
+
+    <p>{{mapFilterOutput}}</p>
+
+    <button (click)="loadPost()">
+
+      Run switchMap
+
+    </button>
+
+    @if(switchMapOutput){
+
+    <div class="result">
+
+      <h3>switchMap Output</h3>
+
+      <p><b>ID:</b> {{switchMapOutput.id}}</p>
+
+      <p><b>Title:</b> {{switchMapOutput.title}}</p>
+
+    </div>
+
+    }
+
+    <button (click)="loadUsers()">
+
+      Run mergeMap
+
+    </button>
+
+    @for(user of mergeMapOutput; track user.id){
+
+      <div class="result">
+
+        {{user.id}} - {{user.name}}
+
+      </div>
+
+    }
+
+  </div>
+
+</div>
