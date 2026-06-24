@@ -308,8 +308,7 @@ Error Logs
 # Author
 
 **Shaily Kumari**
-
-Capgemini Heritage Angular Training
+Angular Training
 
 ---
 
