@@ -1,59 +1,320 @@
-# DAY18
+# 🚀 Angular HTTP Interceptors Assignment (DAY-18)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+<div align="center">
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-21-red?style=for-the-badge&logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![RxJS](https://img.shields.io/badge/RxJS-7-purple?style=for-the-badge)
+![HTTP](https://img.shields.io/badge/HTTP-Interceptor-success?style=for-the-badge)
 
-To start a local development server, run:
+### 📚 Capgemini Heritage Training - Angular Assignment
+
+</div>
+
+---
+
+# 📌 Project Overview
+
+This project demonstrates the implementation of **Angular HTTP Interceptors** using Angular 21.
+
+The application covers:
+
+- ✅ Logging all outgoing HTTP requests
+- ✅ Logging response status codes
+- ✅ Measuring API response time
+- ✅ Global HTTP error handling
+- ✅ Automatic retry mechanism
+- ✅ Toast notification service
+- ✅ Error logging service
+- ✅ Debug page to view all logged errors
+
+---
+
+# 📂 Project Structure
+
+```
+src
+│
+├── app
+│
+├── components
+│   ├── Home
+│   ├── Login
+│   ├── Debug
+│   └── Toast
+│
+├── services
+│   ├── ApiService
+│   ├── ToastService
+│   └── ErrorLogService
+│
+├── interceptors
+│   ├── LoggingInterceptor
+│   ├── TimingInterceptor
+│   └── ErrorInterceptor
+│
+├── app.routes.ts
+├── app.config.ts
+└── app.ts
+```
+
+---
+
+# ✅ Assignment 1
+
+## HTTP Logging Interceptor
+
+### Features
+
+✔ LoggingInterceptor
+
+- Logs HTTP Request URL
+- Logs HTTP Request Method
+- Logs HTTP Response Status Code
+
+✔ TimingInterceptor
+
+- Calculates API response time
+- Displays request completion time in milliseconds
+
+---
+
+## Console Output
+
+```text
+========== REQUEST ==========
+Method : GET
+URL : https://jsonplaceholder.typicode.com/posts
+=============================
+
+Request completed in
+84 ms
+
+========== RESPONSE ==========
+Status : 200
+Status Text : OK
+=============================
+```
+
+---
+
+# ✅ Assignment 3
+
+## Global Error Interceptor
+
+### Features
+
+- retry(2)
+- catchError()
+- Handles HTTP Errors
+
+| Status Code | Action |
+|-------------|--------|
+| 400 | Bad Request |
+| 401 | Remove Token + Redirect to Login |
+| 403 | Forbidden |
+| 404 | Resource Not Found |
+| 500 | Server Error |
+
+---
+
+# Toast Notification
+
+Whenever an error occurs, a toast notification appears.
+
+Example:
+
+```text
+❌ 404 Resource Not Found
+```
+
+---
+
+# Error Log Service
+
+All errors are stored inside **ErrorLogService**.
+
+The Debug page displays previously logged errors.
+
+Example
+
+```text
+Error Logs
+
+404 Resource Not Found
+
+500 Internal Server Error
+
+401 Unauthorized
+```
+
+---
+
+# Routing
+
+| Route | Description |
+|--------|-------------|
+| / | Home Page |
+| /debug | Debug Page |
+| /login | Login Page |
+
+---
+
+# Technologies Used
+
+- Angular 21
+- TypeScript
+- RxJS
+- Angular Router
+- Angular HTTP Client
+- Functional HTTP Interceptors
+
+---
+
+# How to Run
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run project
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+# Assignment 1 Output
+
+### Home Page
+
+```
+-------------------------------------
+
+Angular HTTP Interceptor Assignment
+
+Home | Debug | Login
+
+-------------------------------------
+
+[ Load Posts ]
+
+-------------------------------------
+
+Post Title
+
+Post Description
+
+-------------------------------------
+
+Post Title
+
+Post Description
 ```
 
-## Building
+---
 
-To build the project run:
+### Browser Console
 
-```bash
-ng build
+```text
+========== REQUEST ==========
+Method : GET
+URL : https://jsonplaceholder.typicode.com/posts
+=============================
+
+Request completed in
+79 ms
+
+========== RESPONSE ==========
+Status : 200
+Status Text : OK
+=============================
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+# Assignment 3 Output
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 404 Error
 
-```bash
-ng test
+```text
+❌ 404 Resource Not Found
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 401 Error
 
-```bash
-ng e2e
+```text
+Token Removed
+
+Redirecting to Login...
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 500 Error
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```text
+Something went wrong on the server.
+```
+
+---
+
+## Debug Page
+
+```text
+Error Logs
+
+404 Resource Not Found
+
+500 Internal Server Error
+
+401 Unauthorized
+```
+
+---
+
+# Learning Outcomes
+
+- HTTP Interceptors
+- Functional Interceptors
+- HTTP Request Pipeline
+- RxJS retry()
+- RxJS catchError()
+- Dependency Injection
+- Angular Services
+- Global Error Handling
+- Toast Notifications
+- Angular Routing
+
+---
+
+# Author
+
+**Shaily Kumari**
+
+Capgemini Heritage Angular Training
+
+---
+
+<div align="center">
+
+⭐ If you found this project helpful, don't forget to star the repository.
+
+</div>
