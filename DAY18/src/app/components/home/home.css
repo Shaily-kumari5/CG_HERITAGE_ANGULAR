@@ -1,0 +1,37 @@
+.container{
+
+width:80%;
+
+margin:auto;
+
+}
+
+button{
+
+padding:12px;
+
+background:#1976d2;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+margin-bottom:20px;
+
+}
+
+.card{
+
+background:white;
+
+padding:15px;
+
+margin:15px 0;
+
+border-radius:8px;
+
+box-shadow:0 0 10px lightgray;
+
+}

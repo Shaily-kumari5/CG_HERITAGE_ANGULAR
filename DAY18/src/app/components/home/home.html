@@ -1,0 +1,27 @@
+<div class="container">
+
+<button (click)="loadPosts()">
+
+Load Posts
+
+</button>
+
+<div
+class="card"
+*ngFor="let post of posts">
+
+<h3>
+
+{{post.title}}
+
+</h3>
+
+<p>
+
+{{post.body}}
+
+</p>
+
+</div>
+
+</div>
