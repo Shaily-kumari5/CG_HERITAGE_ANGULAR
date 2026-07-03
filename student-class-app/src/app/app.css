@@ -1,0 +1,136 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    margin:0;
+}
+
+/* Background */
+
+.background{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:linear-gradient(135deg,#141E30,#243B55);
+}
+
+/* Main Card */
+
+.student-card{
+    width:500px;
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+    transition:0.4s;
+}
+
+.student-card:hover{
+    transform:translateY(-10px);
+}
+
+/* Header */
+
+.header{
+    background:linear-gradient(90deg,#4A00E0,#8E2DE2);
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    opacity:.9;
+}
+
+/* Student Details */
+
+.details{
+    padding:30px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+    padding:15px 20px;
+    background:#f4f6f9;
+    border-left:6px solid #8E2DE2;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.row:hover{
+    background:#8E2DE2;
+    color:black;
+    transform:translateX(8px);
+}
+
+.row:hover strong{
+    color:#fff;
+}
+
+.row span{
+    font-weight:600;
+    color:#555;
+}
+
+.row strong{
+    color:#4A00E0;
+    font-size:18px;
+}
+
+/* Template Literal Section */
+
+.template-box{
+    margin:25px;
+    padding:20px;
+    background:#1f2937;
+    border-radius:15px;
+    color:#00ff99;
+}
+
+.template-box h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+.template-box pre{
+    font-size:17px;
+    line-height:1.8;
+    white-space:pre-wrap;
+}
+
+/* Responsive */
+
+@media(max-width:600px){
+
+    .student-card{
+        width:100%;
+    }
+
+    .header h1{
+        font-size:26px;
+    }
+
+    .row{
+        flex-direction:column;
+        gap:8px;
+        text-align:center;
+    }
+
+}
